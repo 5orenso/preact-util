@@ -1,0 +1,57 @@
+{
+  "name": "preact-util",
+  "description": "A nice boilerplate with unit tests, linting and code coverage.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/5orenso/preact-util",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5orenso/preact-util"
+  },
+  "bugs": {
+    "url": "https://github.com/5orenso/preact-util/issues"
+  },
+  "author": {
+    "name": "Øistein Sørensen",
+    "email": "sorenso@gmail.com"
+  },
+  "main": "lib/preact-util.js",
+  "engines": {
+    "node": ">=8.11.0"
+  },
+  "scripts": {
+    "lint": "eslint ./lib/**/*.js",
+    "test": "jest --coverage",
+    "test:simple": "jest",
+    "test:watch": "jest --watch --onlyChanged",
+    "build": "bash ./bin/build-release.sh",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-import": "^2.18.0",
+    "jest": "^24.8.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "pubsub-js": "^1.8.0",
+    "querystring": "^0.2.0"
+  },
+  "jest": {
+    "verbose": true,
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/frontend",
+      "src/shared"
+    ]
+  }
+}
