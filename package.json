@@ -1,7 +1,7 @@
 {
   "name": "preact-util",
   "description": "A nice boilerplate with unit tests, linting and code coverage.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/5orenso/preact-util",
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "node-simple-utilities": "^1.2.0",
     "pubsub-js": "^1.8.0",
     "querystring": "^0.2.0"
   },
