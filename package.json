@@ -1,7 +1,7 @@
 {
   "name": "preact-util",
   "description": "A utility for preact apps.",
-  "version": "1.4.37",
+  "version": "1.4.38",
   "homepage": "https://github.com/5orenso/preact-util",
   "repository": {
     "type": "git",
