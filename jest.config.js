@@ -7,6 +7,9 @@ module.exports = {
   // moduleNameMapper: {
   //   '^@/(.*)$': '<rootDir>/src/$1'
   // },
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+  },
   testMatch: [
     '<rootDir>/(__tests__/**/**/*.(js|jsx|ts|tsx))'
   ],
