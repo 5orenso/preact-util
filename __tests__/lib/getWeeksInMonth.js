@@ -1,7 +1,34 @@
 import preactUtil from '../../lib/preact-util';
 
+function log(messages) {
+    messages.forEach(message => {
+        process.stdout.write(JSON.stringify(message, null, 4) + ' ');
+    });
+    process.stdout.write('\n');
+}
 
 describe('preactUtil.getWeeksInMonth', () => {
+    test('should correctly calculate weeks for January 2021', () => {
+        const month = 1;
+        const year = 2021;
+        const weeks = preactUtil.getWeeksInMonth(month, year);
+        expect(weeks).toHaveLength(5);
+
+        expect(weeks[0]).toMatchObject({
+            start: 1,
+            end: 3,
+            week: preactUtil.getWeek(new Date(year, month - 1, 1)),
+            year: 2020,
+        });
+
+        expect(weeks[4]).toMatchObject({
+            start: 25,
+            end: 31,
+            week: preactUtil.getWeek(new Date(year, month - 1, 29)),
+            year: 2021,
+        });
+    });
+
     test('should correctly calculate weeks for March 2021 starting on Monday', () => {
         const month = 3;
         const year = 2021;
